@@ -1,0 +1,29 @@
+% !TEX root = exercises_4.tex
+\input{exercises/_common_header.tex}
+\Newassociation{solution}{Solution}{exercises_4_solution}
+\newif\ifDisplaySolutions\DisplaySolutionstrue%
+
+\begin{document}
+\title{Computational Macroeconomics\\~\\Summer 2025\\~\\Exercise Sheet 4}
+\author{Willi Mutschler\\willi@mutschler.eu}
+\date{Version: 1.0\\Latest version available on: \href{https://github.com/wmutschl/Computational-Macroeconomics/releases/latest/download/exercises_4.pdf}{GitHub}}
+\maketitle\thispagestyle{empty}
+
+\newpage
+\Opensolutionfile{exercises_4_solution}[exercises_4_solution]
+\tableofcontents\thispagestyle{empty}\newpage
+
+\setcounter{page}{1}
+\input{exercises/nk_model_algebra.tex}\newpage
+\input{exercises/nk_preprocess_steady.tex}\newpage
+\printbibliography%
+\newpage
+
+\Closesolutionfile{exercises_4_solution}
+\ifDisplaySolutions%
+\newpage
+\appendix
+\section{Solutions}
+\input{exercises_4_solution}
+\fi
+\end{document}

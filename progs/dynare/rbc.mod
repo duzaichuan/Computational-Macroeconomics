@@ -1,9 +1,8 @@
-% =========================================================================
 % computes the steady-state of the RBC model with log utility
-% =========================================================================
+% -------------------------------------------------------------------------
 % Willi Mutschler (willi@mutschler.eu)
-% Version: May 5, 2023
-% =========================================================================
+% Version: April 26, 2024
+% -------------------------------------------------------------------------
 var y c k n a r w iv;
 varexo eps_a;
 parameters BETTA DELT GAMA PSSI ALPH RHOA A;
@@ -19,7 +18,7 @@ r = ALPH*y/k(-1);
 log(a) = (1-RHOA)*log(steady_state(a)) + RHOA*log(a(-1)) + eps_a;
 end;
 
-BETTA=0.99; DELT=0.025; GAMA=1; PSSI=1.6; ALPH=0.35; RHOA=0.9; A=10; 
+BETTA=0.99; DELT=0.025; GAMA=1; PSSI=1.6; ALPH=0.35; RHOA=0.9; A=1;
 
 steady_state_model;
 a = A;
@@ -40,9 +39,9 @@ disp(array2table(M_.lead_lag_incidence,...
 
 % create steady-state vectors
 [I,~] = find(M_.lead_lag_incidence');
-y_ss   = oo_.steady_state;      % steady-state of endogenous variables
-zzz_ss = oo_.steady_state(I);   % steady-state of dynamic variables
-ex_ss  = oo_.exo_steady_state'; % steady-state of exogenous variables
+y_ss   = oo_.steady_state;                % steady-state of endogenous variables
+zzz_ss = oo_.steady_state(I);             % steady-state of dynamic variables
+ex_ss  = transpose(oo_.exo_steady_state); % steady-state of exogenous variables
 
 % evaluate dynamic model residuals and Jacobian at steady-state
 [dynare_resid, dynare_g1] = feval([M_.fname,'.dynamic'], zzz_ss, ex_ss, M_.params, y_ss, 1);

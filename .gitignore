@@ -1,6 +1,7 @@
+.vscode/settings.json
+
 class/
-exam/
-literature/
+exam/summer-*
 stuff/
 
 week_*.log
@@ -95,8 +96,6 @@ progs/dynare/an_schorfheide_nonlinear/
 
 progs/dynare/an_schorfheide_nonlinear_exp/
 
-common_header.log
-
 progs/replications/Annicchiarico_DiDio_2015/ann_dio_2015_tbl1_tbl2_no_policy.log
 
 progs/replications/Annicchiarico_DiDio_2015/ann_dio_2015_tbl2_environmental_policy.log
@@ -108,3 +107,29 @@ progs/replications/Annicchiarico_DiDio_2015/ann_dio_2015_tbl2_environmental_poli
 progs/replications/Ascari_Sbordone_2014/ascari_sbordone_2014_common.log
 
 progs/replications/Ascari_Sbordone_2014/ascari_sbordone_2014_common/
+
+progs/dynare/arma11/
+
+progs/dynare/BaxterKingGrowthSteadyState/
+
+progs/dynare/BaxterKingSteadyState/
+
+progs/dynare/rbcCRRA/
+
+progs/dynare/rbcLogutil/
+
+progs/replications/Annicchiarico_DiDio_2015/as_irf_a/
+
+progs/replications/Ascari_Sbordone_2014/as_fig11/
+
+progs/replications/Ascari_Sbordone_2014/as_fig14/
+
+progs/replications/Ascari_Sbordone_2014/ascari_sbordone_2014_fig7/
+
+progs/replications/Ascari_Sbordone_2014/ascari_sbordone_2014_fig8/
+
+progs/replications/Ascari_Sbordone_2014/ascari_sbordone_2014_moments/
+
+progs/replications/Eichenbaum_Rebelo_Trabandt_2022/ert_model_figures_demand/
+
+progs/dynare/Brock_Mirman/

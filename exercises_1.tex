@@ -1,0 +1,37 @@
+% !TEX root = exercises_1.tex
+\input{exercises/_common_header.tex}
+\Newassociation{solution}{Solution}{exercises_1_solution}
+\newif\ifDisplaySolutions\DisplaySolutionstrue%
+
+\begin{document}
+\title{Computational Macroeconomics\\~\\Summer 2025\\~\\Exercise Sheet 1}
+\author{Willi Mutschler\\willi@mutschler.eu}
+\date{Version: 1.0\\Latest version available on: \href{https://github.com/wmutschl/Computational-Macroeconomics/releases/latest/download/exercises_1.pdf}{GitHub}}
+\maketitle\thispagestyle{empty}
+
+\newpage
+\Opensolutionfile{exercises_1_solution}[exercises_1_solution]
+\tableofcontents\thispagestyle{empty}\newpage
+
+\setcounter{page}{1}
+\input{exercises/computational_macroeconomics_scope.tex}\newpage
+\input{exercises/programming_languages.tex}\newpage
+\input{exercises/matlab_quick_tour.tex}\newpage
+\input{exercises/arma_simulation.tex}\newpage
+\input{exercises/gitkraken_quick_tour.tex}\newpage
+\printbibliography%
+\newpage
+\appendix
+\section{Exam template files for \LaTeX}
+\lstinputlisting[language=tex,frame=single,title=\lstname,breaklines=true,breakatwhitespace=false,basicstyle=\scriptsize\mlttfamily]{progs/latex/templateExamSolution.tex}
+\lstinputlisting[language=tex,frame=single,title=\lstname,breaklines=false,breakatwhitespace=false,basicstyle=\scriptsize\mlttfamily]{progs/latex/templateExamBiblio.bib}
+\lstinputlisting[style=Matlab-editor,basicstyle=\footnotesize\mlttfamily,title=\lstname]{progs/matlab/templateMatlabExample.m}
+
+
+\Closesolutionfile{exercises_1_solution}
+\ifDisplaySolutions%
+\newpage
+\section{Solutions}
+\input{exercises_1_solution}
+\fi
+\end{document}
